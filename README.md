@@ -5,7 +5,10 @@ The best way to create your own Timeline, with just CSS!
 
 Timeline.css is based on Sass
 
-<a href='http://christian-fei.com/tutorials/simple-vertical-timeline-with-css/'><h1>Tutorial and more info</h1></a>
+#Tutorial and more info
+
+
+<a href='http://christian-fei.com/tutorials/simple-vertical-timeline-with-css/'>HERE</a>
 
 
 #Preview
