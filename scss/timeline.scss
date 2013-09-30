@@ -3,7 +3,6 @@ $bg-entry: rgb(80,80,80);
 
 *,*:after,*:before{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 
-
 .timeline {
   margin: 0px auto;
   max-width: 700px;
@@ -13,7 +12,9 @@ $bg-entry: rgb(80,80,80);
   padding:0px;
   list-style-type:none;
   
-
+  /*thanks to
+     https://twitter.com/JacoKoster
+  */
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEElEQVQIW2NMTEz8z8gABAAPKwIlXWq1kgAAAABJRU5ErkJggg==);
   background-repeat:repeat-y;
   background-position:50% 0;
@@ -36,7 +37,11 @@ $bg-entry: rgb(80,80,80);
     }
   }
   
-
+  /* 
+    elements 1,(2),3,(4), etc.
+    elements in brackets inherit these properties, some are overridden below (2n)
+    beginning at 0
+  */
   .event {
     position:relative;
     text-align:center;
@@ -54,7 +59,7 @@ $bg-entry: rgb(80,80,80);
     z-index: 15;
     
     color: $text-color;
-    border: 1px solid lighten($bg-entry,30%);
+    border: 1px solid lighten($bg-entry,50%);
     text-decoration: none;
 
     -webkit-transition: background .15s linear;
@@ -65,8 +70,6 @@ $bg-entry: rgb(80,80,80);
     
     &.featured {
       width: 95% !important;
-      background: lighten(#ccc,11%);
-      
       &:after, &:before {
         display: none;
       }
@@ -86,19 +89,21 @@ $bg-entry: rgb(80,80,80);
     }
 
     &:hover {
-      background: lighten($bg-entry,60%);
+      background: lighten($bg-entry,65%);
 
       &:after {
         background: $bg-entry;
       }
     }
     
-    &:nth-child(2n) {
+    &:nth-of-type(2n) {
       float: left;
       clear: left;
-        @media all and(min-width:600px){
-          margin-top:20px;
-        }
+      &:after {
+        right: -5%;
+        /* reset the standard declaration I defined before*/
+        left: auto;
+      }
     }
       
     &:after {      
@@ -115,9 +120,13 @@ $bg-entry: rgb(80,80,80);
       }
     }
       
-    &:nth-child(2n):after {
-      right: -5%;
-      left: auto;
-    }
+    
   }
+
 }
+
+  time{
+    display: block;font-weight: bold;
+
+  }
+          

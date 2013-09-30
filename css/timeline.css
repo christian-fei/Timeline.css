@@ -1,16 +1,11 @@
-/* v2.0 */
-/* v2.0 */
-/* v2.0 */
-/* v2.0 */
-/* v2.0 */
-/* line 9, ../scss/timeline.scss */
+/* line 4, ../scss/timeline.scss */
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 12, ../scss/timeline.scss */
+/* line 6, ../scss/timeline.scss */
 .timeline {
   margin: 0px auto;
   max-width: 700px;
@@ -31,7 +26,7 @@
     beginning at 0
   */
 }
-/* line 30, ../scss/timeline.scss */
+/* line 24, ../scss/timeline.scss */
 .timeline .year {
   background: #505050;
   font-size: 3em;
@@ -43,11 +38,11 @@
   text-align: center;
   margin-top: 50px;
 }
-/* line 41, ../scss/timeline.scss */
+/* line 35, ../scss/timeline.scss */
 .timeline .year:first-of-type {
   margin-top: 0 !important;
 }
-/* line 51, ../scss/timeline.scss */
+/* line 45, ../scss/timeline.scss */
 .timeline .event {
   position: relative;
   text-align: center;
@@ -62,7 +57,7 @@
   background: white;
   z-index: 15;
   color: #4d4d4d;
-  border: 1px solid #9d9d9d;
+  border: 1px solid #d0d0d0;
   text-decoration: none;
   -webkit-transition: background .15s linear;
   -moz-transition: background .15s linear;
@@ -70,51 +65,50 @@
   -o-transition: background .15s linear;
   transition: background .15s linear;
 }
-/* line 77, ../scss/timeline.scss */
+/* line 71, ../scss/timeline.scss */
 .timeline .event.featured {
   width: 95% !important;
-  background: #e8e8e8;
 }
-/* line 81, ../scss/timeline.scss */
+/* line 73, ../scss/timeline.scss */
 .timeline .event.featured:after, .timeline .event.featured:before {
   display: none;
 }
 @media all and (max-width: 600px) {
-  /* line 51, ../scss/timeline.scss */
+  /* line 45, ../scss/timeline.scss */
   .timeline .event {
     width: 85%;
   }
 }
-/* line 90, ../scss/timeline.scss */
+/* line 82, ../scss/timeline.scss */
 .timeline .event.offset-first {
   margin-top: -1.5em;
 }
-/* line 94, ../scss/timeline.scss */
+/* line 86, ../scss/timeline.scss */
 .timeline .event img {
   margin-top: 10px;
   max-width: 100%;
 }
-/* line 99, ../scss/timeline.scss */
+/* line 91, ../scss/timeline.scss */
 .timeline .event:hover {
-  background: #e9e9e9;
+  background: #f6f6f6;
 }
-/* line 102, ../scss/timeline.scss */
+/* line 94, ../scss/timeline.scss */
 .timeline .event:hover:after {
   background: #505050;
 }
-/* line 107, ../scss/timeline.scss */
-.timeline .event:nth-child(2n) {
+/* line 99, ../scss/timeline.scss */
+.timeline .event:nth-of-type(2n) {
   float: left;
   clear: left;
 }
-@media all and (min-width: 600px) {
-  /* line 107, ../scss/timeline.scss */
-  .timeline .event:nth-child(2n) {
-    margin-top: 20px;
-  }
+/* line 102, ../scss/timeline.scss */
+.timeline .event:nth-of-type(2n):after {
+  right: -5%;
+  /* reset the standard declaration I defined before*/
+  left: auto;
 }
 @media all and (min-width: 650px) {
-  /* line 115, ../scss/timeline.scss */
+  /* line 109, ../scss/timeline.scss */
   .timeline .event:after {
     display: block;
     content: ' ';
@@ -128,38 +122,9 @@
     border: 2px solid white;
   }
 }
-/* line 129, ../scss/timeline.scss */
-.timeline .event:nth-child(2n):after {
-  right: -5%;
-  /* reset the standard declaration I defined before*/
-  left: auto;
-}
 
-/* line 151, ../scss/timeline.scss */
-.padd {
+/* line 128, ../scss/timeline.scss */
+time {
   display: block;
-  padding: 10px;
-}
-/* line 153, ../scss/timeline.scss */
-.padd.center {
-  text-align: center;
-}
-
-/* line 158, ../scss/timeline.scss */
-.ad {
-  display: block;
-  background: rgba(50, 50, 50, 0.5);
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  padding: 15px;
-  font-weight: 800;
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
-}
-
-/* line 170, ../scss/timeline.scss */
-a {
-  text-decoration: none;
-  color: black;
+  font-weight: bold;
 }
