@@ -21,7 +21,7 @@ $bg-entry: rgb(80,80,80);
   
   
 
-    .year {
+  .year {
     background: $bg-entry;
     font-size: 3em;
     max-width: 4em; 
@@ -34,6 +34,10 @@ $bg-entry: rgb(80,80,80);
     
     &:first-of-type {
       margin-top: 0 !important;
+    }
+
+    & + .event{
+      margin-top: -1.5em;
     }
   }
   
