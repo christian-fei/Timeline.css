@@ -148,3 +148,8 @@
   color: #505050;
   border: 2px solid #505050;
 }
+/* line 154, ../scss/timeline.scss */
+.timeline.v2 .event, .timeline.v1.v2 .event {
+  border: none;
+  border-right: 1px solid #FAFAFA;
+}

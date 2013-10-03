@@ -150,5 +150,11 @@ $bg-entry: rgb(80,80,80);
       color:$bg-entry;
       border:2px solid $bg-entry;
     }
+
+    .event{
+      border:none;
+      // background:#FAFAFA;
+      border-right:1px solid #FAFAFA;
+    }
   }
 }         
