@@ -1,5 +1,5 @@
 /* line 4, ../scss/timeline.scss */
-*, *:after, *:before {
+.timeline, .timeline *, .timeline:after, .timeline *:after, .timeline:before, .timeline *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -124,7 +124,7 @@
 }
 
 /* line 128, ../scss/timeline.scss */
-time {
+.timeline time {
   display: block;
   font-weight: bold;
 }
