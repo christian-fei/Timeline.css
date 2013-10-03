@@ -151,6 +151,6 @@
 /* line 154, ../scss/timeline.scss */
 .timeline.v2 .event, .timeline.v1.v2 .event {
   border: none;
-  background: #EFEFEF;
+  background: #FAFAFA;
   border-bottom: 1px solid #cac4c4;
 }
