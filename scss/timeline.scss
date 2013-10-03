@@ -1,7 +1,6 @@
 $text-color: rgb(77, 77, 77);
 $bg-entry: rgb(80,80,80);
 
-*,*:after,*:before{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 
 .timeline {
   margin: 0px auto;
@@ -19,7 +18,15 @@ $bg-entry: rgb(80,80,80);
   background-repeat:repeat-y;
   background-position:50% 0;
   
-  
+  /*
+    border-box ftw, inside .timeline now to prevent
+    screwing up your CSS rule if you are not using
+    border-box
+    if that's the case, I have nothing to say to you.
+
+    thanks to https://github.com/jimmyandrade
+  */ 
+  *,*:after,&:after,*:before,&:before{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 
   .year {
     background: $bg-entry;
@@ -35,7 +42,10 @@ $bg-entry: rgb(80,80,80);
     &:first-of-type {
       margin-top: 0 !important;
     }
-
+  
+    /*
+      thanks to Lukas Knuth ( https://github.com/christian-fei/Timeline.css/issues/1 )
+    */
     & + .event{
       margin-top: -1.5em;
     }
@@ -123,14 +133,9 @@ $bg-entry: rgb(80,80,80);
         border: 2px solid white;
       }
     }
-      
-    
   }
-
-}
 
   time{
     display: block;font-weight: bold;
-
   }
-          
+}         

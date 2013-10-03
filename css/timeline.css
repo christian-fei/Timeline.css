@@ -1,11 +1,4 @@
-/* line 4, ../scss/timeline.scss */
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 6, ../scss/timeline.scss */
+/* line 5, ../scss/timeline.scss */
 .timeline {
   margin: 0px auto;
   max-width: 700px;
@@ -20,13 +13,27 @@
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEElEQVQIW2NMTEz8z8gABAAPKwIlXWq1kgAAAABJRU5ErkJggg==);
   background-repeat: repeat-y;
   background-position: 50% 0;
+  /*
+    border-box ftw, inside .timeline now to prevent
+    screwing up your CSS rule if you are not using
+    border-box
+    if that's the case, I have nothing to say to you.
+
+    thanks to https://github.com/jimmyandrade
+  */
   /* 
     elements 1,(2),3,(4), etc.
     elements in brackets inherit these properties, some are overridden below (2n)
     beginning at 0
   */
 }
-/* line 24, ../scss/timeline.scss */
+/* line 29, ../scss/timeline.scss */
+.timeline *, .timeline *:after, .timeline:after, .timeline *:before, .timeline:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 31, ../scss/timeline.scss */
 .timeline .year {
   background: #505050;
   font-size: 3em;
@@ -37,12 +44,19 @@
   border-radius: 30% / 100%;
   text-align: center;
   margin-top: 50px;
+  /*
+    thanks to Lukas Knuth ( https://github.com/christian-fei/Timeline.css/issues/1 )
+  */
 }
-/* line 35, ../scss/timeline.scss */
+/* line 42, ../scss/timeline.scss */
 .timeline .year:first-of-type {
   margin-top: 0 !important;
 }
-/* line 45, ../scss/timeline.scss */
+/* line 49, ../scss/timeline.scss */
+.timeline .year + .event {
+  margin-top: -1.5em;
+}
+/* line 59, ../scss/timeline.scss */
 .timeline .event {
   position: relative;
   text-align: center;
@@ -65,50 +79,50 @@
   -o-transition: background .15s linear;
   transition: background .15s linear;
 }
-/* line 71, ../scss/timeline.scss */
+/* line 85, ../scss/timeline.scss */
 .timeline .event.featured {
   width: 95% !important;
 }
-/* line 73, ../scss/timeline.scss */
+/* line 87, ../scss/timeline.scss */
 .timeline .event.featured:after, .timeline .event.featured:before {
   display: none;
 }
 @media all and (max-width: 600px) {
-  /* line 45, ../scss/timeline.scss */
+  /* line 59, ../scss/timeline.scss */
   .timeline .event {
     width: 85%;
   }
 }
-/* line 82, ../scss/timeline.scss */
+/* line 96, ../scss/timeline.scss */
 .timeline .event.offset-first {
   margin-top: -1.5em;
 }
-/* line 86, ../scss/timeline.scss */
+/* line 100, ../scss/timeline.scss */
 .timeline .event img {
   margin-top: 10px;
   max-width: 100%;
 }
-/* line 91, ../scss/timeline.scss */
+/* line 105, ../scss/timeline.scss */
 .timeline .event:hover {
   background: #f6f6f6;
 }
-/* line 94, ../scss/timeline.scss */
+/* line 108, ../scss/timeline.scss */
 .timeline .event:hover:after {
   background: #505050;
 }
-/* line 99, ../scss/timeline.scss */
+/* line 113, ../scss/timeline.scss */
 .timeline .event:nth-of-type(2n) {
   float: left;
   clear: left;
 }
-/* line 102, ../scss/timeline.scss */
+/* line 116, ../scss/timeline.scss */
 .timeline .event:nth-of-type(2n):after {
   right: -5%;
   /* reset the standard declaration I defined before*/
   left: auto;
 }
 @media all and (min-width: 650px) {
-  /* line 109, ../scss/timeline.scss */
+  /* line 123, ../scss/timeline.scss */
   .timeline .event:after {
     display: block;
     content: ' ';
@@ -122,9 +136,8 @@
     border: 2px solid white;
   }
 }
-
-/* line 128, ../scss/timeline.scss */
-time {
+/* line 138, ../scss/timeline.scss */
+.timeline time {
   display: block;
   font-weight: bold;
 }
