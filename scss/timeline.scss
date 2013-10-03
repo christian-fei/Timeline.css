@@ -154,7 +154,8 @@ $bg-entry: rgb(80,80,80);
     .event{
       border:none;
       // background:#FAFAFA;
-      border-bottom:1px solid #E2DFDF;
+      background:#E2DFDF;
+      border-bottom:1px solid darken(#E2DFDF,10%);
     }
   }
 }         
