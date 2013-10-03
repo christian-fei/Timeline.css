@@ -2,7 +2,8 @@ $text-color: rgb(77, 77, 77);
 $bg-entry: rgb(80,80,80);
 
 
-.timeline {
+//v1
+.timeline, .timeline.v1/*used in the tutorial, don't bother*/ {
   margin: 0px auto;
   max-width: 700px;
   overflow:hidden;
@@ -137,5 +138,17 @@ $bg-entry: rgb(80,80,80);
 
   time{
     display: block;font-weight: bold;
+  }
+
+
+
+
+  /*v2*/
+  &.v2{
+    .year{
+      background:white;
+      color:$bg-entry;
+      border:2px solid $bg-entry;
+    }
   }
 }         
