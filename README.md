@@ -5,6 +5,8 @@ The best way to create your own Timeline, with just CSS!
 
 Timeline.css is based on Sass
 
+![awesomeness](http://b.adge.me/badge/awesomeness-9000+-green.svg)
+
 #Tutorial and more info
 
 
