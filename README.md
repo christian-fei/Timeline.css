@@ -7,10 +7,8 @@ Timeline.css is based on Sass
 
 ![awesomeness](http://b.adge.me/badge/awesomeness-9000+-green.svg)
 
-#Tutorial and more info
+# [Tutorial and more info](http://christian-fei.com/responsive-vertical-timeline-with-css/)
 
-
-<a href='http://christian-fei.com/tutorials/simple-vertical-timeline-with-css/'>HERE</a>
 
 
 #Preview
